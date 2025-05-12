@@ -1,12 +1,16 @@
 import psycopg2
+from dotenv import load_dotenv
+import os
+
+load_dotenv()  # Load variables from .env
 
 def create_connection():
     connection = psycopg2.connect(
-        user='admin',
-        password='admin',
-        host='172.24.16.1',
-        port='5432',
-        database='Inventory_DB'
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+        host=os.getenv("DB_HOST"),
+        port=os.getenv("DB_PORT"),
+        database=os.getenv("DB_NAME")
     )
     return connection
 
