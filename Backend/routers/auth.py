@@ -44,6 +44,7 @@ def verifying_otp():
             "token":""
         }
     }
+
 @router.post("/register")
 def register_user(user: RegistrationUser):
     query = f"SELECT user_name FROM users WHERE user_name = '{user.user_name}'"
