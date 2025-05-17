@@ -6,3 +6,4 @@ env/
 .env.*
 
 __pycache__/
+fullstack/backend/All_images/

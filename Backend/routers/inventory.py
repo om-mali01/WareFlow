@@ -31,7 +31,7 @@ async def add_inventory(
         user_role = payload["role"]
         if not user_name:
             return JSONResponse(content={"message": "User not available", "status": False}, status_code=404)
-        if user_role not in ["inventory_manager", "super_admin"]:
+        if user_role not in ["inventory_manager", "super_admin", "admin"]:
             return JSONResponse(content={"message": "Don't have access", "status": False}, status_code=403)
 
         cursor.execute("SELECT sku FROM ItemDetails WHERE sku=%s", (data.sku,))

@@ -6,7 +6,7 @@ function Login() {
     const [form, setForm] = useState({
         user_name: '',
         password: ''
-    });
+});
 
     const dispatch = useDispatch();
     const { loading, user, error } = useSelector((state) => state.userLogin);

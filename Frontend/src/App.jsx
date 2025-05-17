@@ -4,6 +4,8 @@ import store from '../store/store';
 import RegisterForm from './pages/RegisterForm';
 import Login from './pages/LoginForm';
 import SideBar from './components/sideBar';
+import AddProduct from './pages/AddProduct';
+import MyComponent from './components/tempComp';
 
 function App() {
     return (
@@ -12,7 +14,10 @@ function App() {
             <div className="App">
                 {/* <RegisterForm />
                 <Login /> */}
-                <SideBar />
+                {/* <SideBar /> */}
+                <Login />
+                <AddProduct />
+                <MyComponent />
             </div>
         </Provider>
     );
