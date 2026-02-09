@@ -245,7 +245,7 @@ async def update_item(
         if not user_name:
             raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token or user not authenticated.")
 
-        if user_role not in ["super_admin", "inventory_manager"]:
+        if user_role not in ["super_admin", "inventory_manager", "admin"]:
             raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="don't have access")
         
         check_sku_db = "SELECT sku FROM ItemDetails WHERE sku=%s"
